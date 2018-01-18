@@ -1,0 +1,10 @@
+push:loader.PushCreator
+add:loader.AddCreator
+sub:loader.SubCreator
+mul:loader.MulCreator
+jmp:loader.JumpCreator
+jmpg:loader.JumpGreaterCreator
+load:loader.LoadCreator
+store:loader.StoreCreator
+input:loader.InputCreator
+output:loader.OutputCreator

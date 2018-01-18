@@ -1,0 +1,45 @@
+cuadrado
+pinchar 10,10
+soltar 20,20
+circulo
+pinchar 100,100
+soltar 200,200
+dibujar		// Hay 2 figuras
+
+
+undo
+dibujar
+undo 
+dibujar		// dibujo vacío
+
+
+redo
+dibujar		// Hay 1 figura
+redo 
+dibujar		// Hay 2 figuras
+
+
+pinchar 15,15	// Inicio de movimiento del cuadrado
+mover 16,16
+mover 17,17
+soltar 20,20
+dibujar		// Cuadrado movido
+
+
+undo		// se han deshecho los 3 últimos pixels movidos o TODOS?
+dibujar		
+
+
+undo
+undo
+dibujar 	// Dejamos límpio el dibujo
+
+
+cuadrado
+pinchar 50,50
+soltar 60,60
+dibujar
+
+
+redo		// ?
+
