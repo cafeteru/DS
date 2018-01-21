@@ -1,6 +1,6 @@
 package editor;
 
-import java.util.*;
+import java.util.Stack;
 
 public class Historial {
 	private static final Historial instance = new Historial();

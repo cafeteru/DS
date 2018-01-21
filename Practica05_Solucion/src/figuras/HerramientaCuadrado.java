@@ -1,11 +1,10 @@
 package figuras;
 
-import herramientas.HerramientaCreacion;
-
 import java.awt.Point;
 
-import editor.*;
-
+import editor.Editor;
+import editor.Figura;
+import herramientas.HerramientaCreacion;
 
 public class HerramientaCuadrado extends HerramientaCreacion {
 

@@ -1,12 +1,12 @@
 package propuesta1;
 
-import vista.*;
-import components.*;
+import components.Coordenadas;
+import vista.Lugar;
 
 public class Monumento implements Lugar {
 
 	// ----------------------------------------------
-	// Código anterior igual ------------
+	// Cï¿½digo anterior igual ------------
 	private String name;
 	private String author;
 	private String address;
@@ -30,7 +30,7 @@ public class Monumento implements Lugar {
 	}
 
 	// ----------------------------------------------
-	// Añadir estos métodos de MapElement ------------
+	// Aï¿½adir estos mï¿½todos de MapElement ------------
 
 	public Coordenadas getCoordinates() {
 		/* Hacerlo */

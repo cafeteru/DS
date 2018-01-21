@@ -1,6 +1,6 @@
 package vista;
 
-import components.*;
+import components.Coordenadas;
 
 public interface Lugar {
 	String getNombre();

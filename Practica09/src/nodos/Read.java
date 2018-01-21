@@ -10,7 +10,7 @@ public class Read implements Sentencia {
 	}
 
 	@Override
-	public Object accept(Visitor v, Object param)  {
+	public Object accept(Visitor v, Object param) {
 		return v.visit(this, param);
 	}
 }

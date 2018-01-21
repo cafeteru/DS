@@ -1,6 +1,8 @@
 package main;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 import modelo.Juego;
 import modelo.Armas.EscopetaFeria;

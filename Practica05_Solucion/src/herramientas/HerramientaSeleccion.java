@@ -2,8 +2,9 @@ package herramientas;
 
 import java.awt.Point;
 
-import editor.*;
-
+import editor.Editor;
+import editor.Figura;
+import editor.Historial;
 
 public class HerramientaSeleccion implements Herramienta {
 
@@ -22,7 +23,8 @@ public class HerramientaSeleccion implements Herramienta {
 
 	public void soltar(int x, int y) {
 		mueveIncremento(x, y);
-		Historial.getInstance().añadeCambio(new CambioMovimiento(seleccionada, lastPosition.x - inicio.x, lastPosition.y - inicio.y));
+		Historial.getInstance().añadeCambio(new CambioMovimiento(seleccionada,
+				lastPosition.x - inicio.x, lastPosition.y - inicio.y));
 	}
 
 	private void mueveIncremento(int x, int y) {

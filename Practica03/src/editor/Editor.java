@@ -32,7 +32,7 @@ public class Editor {
 		dibujo.dibujar();
 	}
 
-	public void añadirFigura(Figura figura) {
-		dibujo.añadirFigura(figura);
+	public void aÃ±adirFigura(Figura figura) {
+		dibujo.aÃ±adirFigura(figura);
 	}
 }

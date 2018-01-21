@@ -1,12 +1,11 @@
 package parte2;
 
 public class Movie_new_release implements MovieType {
-	
 
 	@Override
 	public double getPrice(Rental rental) {
 		// TODO Auto-generated method stub
-		return rental.getDays() * 3;		
+		return rental.getDays() * 3;
 	}
 
 	@Override

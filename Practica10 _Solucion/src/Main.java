@@ -1,4 +1,4 @@
-import java.io.*;
+import java.io.IOException;
 
 import editor.Editor;
 import editor.ui.EditorTextUI;

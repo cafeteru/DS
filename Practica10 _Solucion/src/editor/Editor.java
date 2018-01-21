@@ -1,6 +1,9 @@
 package editor;
 
-import editor.actions.*;
+import editor.actions.Insert;
+import editor.actions.Open;
+import editor.actions.RemoveLastWord;
+import editor.actions.Replace;
 
 public class Editor {
 	private StringBuilder text = new StringBuilder();

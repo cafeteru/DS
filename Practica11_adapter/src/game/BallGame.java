@@ -6,9 +6,9 @@ import Adapter.Adapter;
 import Adapter.AdapterAndroid;
 import Adapter.AdapterPlaystation;
 import Adapter.AdapterWindows;
-import platform.*;
+import platform.Image2D;
 
-/* Esta clase/paquete sería el código del videojuego, el cual se quiere reutilizar
+/* Esta clase/paquete serï¿½a el cï¿½digo del videojuego, el cual se quiere reutilizar
  * en las distintas plataformas 
  */
 
@@ -18,7 +18,7 @@ enum Platform {
 
 public class BallGame {
 
-	// Seleccionar para qué plataforma se quiere generar el juego
+	// Seleccionar para quï¿½ plataforma se quiere generar el juego
 	private Platform platform;
 
 	private Adapter adapter;
@@ -34,12 +34,12 @@ public class BallGame {
 
 		Image2D image = loadImage("Bola.jpg");
 
-		// Lógica principal del juego
+		// Lï¿½gica principal del juego
 		for (int i = 0; i < 10; i++) {
 			Point point = getPosition();
 			// Comprobar colisiones...
 			// Imprimir marcador...
-			// Otra lógica del juego...
+			// Otra lï¿½gica del juego...
 			drawBall(image, point);
 		}
 	}

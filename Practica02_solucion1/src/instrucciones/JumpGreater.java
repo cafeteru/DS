@@ -1,5 +1,6 @@
 package instrucciones;
-import vm.*;
+
+import vm.State;
 
 public class JumpGreater implements Instruccion {
 	public JumpGreater(int direccion) {

@@ -1,8 +1,8 @@
 package figuras;
+
 import java.awt.Point;
 
-import editor.*;
-
+import editor.Figura;
 
 public class Cuadrado implements Figura {
 
@@ -17,7 +17,8 @@ public class Cuadrado implements Figura {
 	}
 
 	public void dibujar() {
-		System.out.println("Cuadrado: x = " + esquina.x + ", y = " + esquina.y + ", ancho = " + ancho + ", alto = " + alto);
+		System.out.println("Cuadrado: x = " + esquina.x + ", y = " + esquina.y
+				+ ", ancho = " + ancho + ", alto = " + alto);
 	}
 
 	public void mover(int dx, int dy) {
@@ -25,7 +26,8 @@ public class Cuadrado implements Figura {
 	}
 
 	public boolean contiene(int x, int y) {
-		return (esquina.x <= x && x <= esquina.x + ancho) && (esquina.y <= y && y <= esquina.y + alto);
+		return (esquina.x <= x && x <= esquina.x + ancho)
+				&& (esquina.y <= y && y <= esquina.y + alto);
 	}
 
 	private Point esquina;

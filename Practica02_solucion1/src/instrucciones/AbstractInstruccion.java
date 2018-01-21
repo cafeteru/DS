@@ -1,8 +1,9 @@
 package instrucciones;
-import vm.*;
+
+import vm.State;
 
 public abstract class AbstractInstruccion implements Instruccion {
-	
+
 	public void execute(State state) {
 		doExecute(state);
 		state.setIP(state.getIP() + 1);

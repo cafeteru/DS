@@ -2,12 +2,12 @@ package game;
 
 import java.awt.Point;
 
-import platform.*;
-import platform.android.*;
-import platform.playstation.*;
-import platform.windows.*;
+import platform.Image2D;
+import platform.android.AndroidAPI;
+import platform.playstation.Playstation5API;
+import platform.windows.WindowsAPI;
 
-/* Esta clase/paquete sería el código del videojuego, el cual se quiere reutilizar
+/* Esta clase/paquete serï¿½a el cï¿½digo del videojuego, el cual se quiere reutilizar
  * en las distintas plataformas 
  */
 
@@ -17,7 +17,7 @@ enum Platform {
 
 public class BallGame {
 
-	// Seleccionar para qué plataforma se quiere generar el juego
+	// Seleccionar para quï¿½ plataforma se quiere generar el juego
 	private Platform platform = Platform.ANDROID;
 	// private Platform platform = Platform.WINDOWS;
 	// private Platform platform = Platform.PLAYSTATION;
@@ -33,12 +33,12 @@ public class BallGame {
 
 		Image2D image = loadImage("Bola.jpg");
 
-		// Lógica principal del juego
+		// Lï¿½gica principal del juego
 		for (int i = 0; i < 10; i++) {
 			Point point = getPosition();
 			// Comprobar colisiones...
 			// Imprimir marcador...
-			// Otra lógica del juego...
+			// Otra lï¿½gica del juego...
 			drawBall(image, point);
 		}
 	}

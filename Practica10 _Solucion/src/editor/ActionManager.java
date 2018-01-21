@@ -14,7 +14,8 @@ public class ActionManager {
 
 	public ActionManager(Editor editor) {
 		if (editor == null)
-			throw new IllegalArgumentException("Se necesita una referencia al editor");
+			throw new IllegalArgumentException(
+					"Se necesita una referencia al editor");
 		this.editor = editor;
 	}
 
@@ -39,7 +40,8 @@ public class ActionManager {
 	public void executeMacro(String name) {
 		Macro macro = macros.get(name);
 		if (macro == null) {
-			System.out.println("No existe ninguna macro con ese nombre: " + name);
+			System.out
+					.println("No existe ninguna macro con ese nombre: " + name);
 			return;
 		}
 		execute(macro);

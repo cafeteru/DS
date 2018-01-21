@@ -1,4 +1,4 @@
-import java.io.*;
+import java.io.IOException;
 
 public class Main {
 
@@ -8,7 +8,7 @@ public class Main {
 
 		system.copyFile("privado.txt", "copia.txt");
 		system.sendToInternet("privado.txt", "156.17.11.196");
-		system.sendWithBluetooth("privado.txt", "Galaxy de Raúl");
+		system.sendWithBluetooth("privado.txt", "Galaxy de Raï¿½l");
 	}
 
 }

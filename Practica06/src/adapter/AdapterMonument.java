@@ -1,8 +1,9 @@
 package adapter;
 
-import components.*;
-import views.MapElement;
+import components.Coordinates;
+import components.GPS;
 import model.Monument;
+import views.MapElement;
 
 public class AdapterMonument implements MapElement {
 

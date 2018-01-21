@@ -1,6 +1,7 @@
 package editor;
 
-import herramientas.*;
+import herramientas.Herramienta;
+import herramientas.HerramientaSeleccion;
 
 public class Editor {
 

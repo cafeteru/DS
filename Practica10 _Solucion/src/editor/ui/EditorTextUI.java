@@ -1,6 +1,8 @@
 package editor.ui;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Arrays;
 
 import editor.Editor;
@@ -11,7 +13,8 @@ public class EditorTextUI {
 
 	public EditorTextUI(Editor editor) {
 		if (editor == null)
-			throw new IllegalArgumentException("La interfaz de usuario necesita una referencia al editor");
+			throw new IllegalArgumentException(
+					"La interfaz de usuario necesita una referencia al editor");
 		this.editor = editor;
 	}
 
@@ -21,16 +24,20 @@ public class EditorTextUI {
 		System.out.println("Acciones");
 		System.out.println("--------");
 		System.out.println("abre <fichero>");
-		System.out.println("inserta <texto>\t\t// inserta las palabras al final del texto");
+		System.out.println(
+				"inserta <texto>\t\t// inserta las palabras al final del texto");
 		System.out.println("borra\t\t\t// borra la última palabra");
-		System.out.println("reemplaza <a> <b>\t// reemplaza la cadena <a> por la <b> en todo el texto");
+		System.out.println(
+				"reemplaza <a> <b>\t// reemplaza la cadena <a> por la <b> en todo el texto");
 		System.out.println("salir");
 		System.out.println();
 		System.out.println("Tareas");
 		System.out.println("------");
-		System.out.println("graba <macro>\t\t// comienza la grabación de una macro");
+		System.out.println(
+				"graba <macro>\t\t// comienza la grabación de una macro");
 		System.out.println("para\t\t\t// finaliza la grabación");
-		System.out.println("ejecuta <macro>\t\t// ejecuta la macro cuyo nombre se indique");
+		System.out.println(
+				"ejecuta <macro>\t\t// ejecuta la macro cuyo nombre se indique");
 		System.out.println();
 
 		do {
@@ -46,7 +53,8 @@ public class EditorTextUI {
 			if (line[0].equals("abre")) {
 				editor.open(line[1]);
 			} else if (line[0].startsWith("ins")) {
-				String[] wordsToAppend = Arrays.copyOfRange(line, 1, line.length);
+				String[] wordsToAppend = Arrays.copyOfRange(line, 1,
+						line.length);
 				editor.insert(wordsToAppend);
 			} else if (line[0].startsWith("borr")) {
 				editor.removeLastWord();

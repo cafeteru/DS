@@ -1,8 +1,8 @@
 package instrucciones;
 
-import java.util.*;
+import java.util.Scanner;
 
-import vm.*;
+import vm.State;
 
 public class Input extends AbstractInstruccion {
 

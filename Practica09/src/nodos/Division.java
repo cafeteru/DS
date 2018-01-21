@@ -11,7 +11,7 @@ public class Division implements Expresion {
 	}
 
 	@Override
-	public Object accept(Visitor v, Object param)  {
+	public Object accept(Visitor v, Object param) {
 		return v.visit(this, param);
 	}
 

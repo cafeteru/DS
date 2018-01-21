@@ -1,6 +1,7 @@
 package Componentes.Instrucciones;
 
-import Componentes.*;
+import Componentes.Compilador;
+import Componentes.Pila;
 
 public class Add implements Instruccion {
 

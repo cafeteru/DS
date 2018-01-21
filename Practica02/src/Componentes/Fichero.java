@@ -1,7 +1,10 @@
 package Componentes;
 
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Fichero {
 	private List<String[]> instrucciones = new ArrayList<String[]>();
@@ -14,11 +17,11 @@ public class Fichero {
 		BufferedReader fichero = new BufferedReader(new FileReader(nombre));
 		String linea;
 		while ((linea = fichero.readLine()) != null)
-			cargaInstrucción(linea);
+			cargaInstruccion(linea);
 		fichero.close();
 	}
 
-	private void cargaInstrucción(String linea) {
+	private void cargaInstruccion(String linea) {
 		if (linea.trim().length() == 0)
 			return;
 		String[] palabras = linea.split(" ");

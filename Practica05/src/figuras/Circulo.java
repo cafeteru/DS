@@ -1,8 +1,8 @@
 package figuras;
+
 import java.awt.Point;
 
-import editor.*;
-
+import editor.Figura;
 
 public class Circulo implements Figura {
 
@@ -12,7 +12,8 @@ public class Circulo implements Figura {
 	}
 
 	public void dibujar() {
-		System.out.println("Círculo: centro = " + centro + ", radio = " + radio);
+		System.out
+				.println("Cï¿½rculo: centro = " + centro + ", radio = " + radio);
 	}
 
 	public void mover(int dx, int dy) {
@@ -20,7 +21,8 @@ public class Circulo implements Figura {
 	}
 
 	public boolean contiene(int x, int y) {
-		double distancia = Math.sqrt(Math.pow(x - centro.x, 2) + Math.pow(y - centro.y, 2));
+		double distancia = Math
+				.sqrt(Math.pow(x - centro.x, 2) + Math.pow(y - centro.y, 2));
 		return distancia < radio;
 	}
 

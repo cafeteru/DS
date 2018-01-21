@@ -2,8 +2,7 @@ package platform.playstation;
 
 import java.awt.Point;
 
-import platform.*;
-
+import platform.Image2D;
 
 public class Playstation5API {
 
@@ -13,10 +12,11 @@ public class Playstation5API {
 	}
 
 	public void render(int x, int y, Image2D image) {
-		System.out.println("(PS5) Dibujando '" + image.getName() + "' en [" + x + "," + y + "]");
+		System.out.println("(PS5) Dibujando '" + image.getName() + "' en [" + x
+				+ "," + y + "]");
 	}
 
-	// Posición del stick en la que el usuario pulsa el botón X 
+	// Posiciï¿½n del stick en la que el usuario pulsa el botï¿½n X
 	public Point getJoystick() {
 		point.translate(10, 10);
 		return new Point(point);

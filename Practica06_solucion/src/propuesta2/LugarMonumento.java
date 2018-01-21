@@ -1,8 +1,9 @@
 package propuesta2;
 
-import model.*;
-import components.*;
-import vista.*;
+import components.Coordenadas;
+import model.Monumento;
+import vista.Lugar;
+import vista.Mapa;
 
 public class LugarMonumento extends Monumento implements Lugar {
 
@@ -28,16 +29,17 @@ public class LugarMonumento extends Monumento implements Lugar {
 		/* Hacerlo */
 	}
 
-	// En el main sería:
+	// En el main serï¿½a:
 	// ----------------------------------------------
 	// Main -----------------------------------
 	public static void main(String[] args) {
 
-		LugarMonumento coliseo = new LugarMonumento("Coliseo", "Vespasiano", "Avenida del Coliseo 1. Roma");
+		LugarMonumento coliseo = new LugarMonumento("Coliseo", "Vespasiano",
+				"Avenida del Coliseo 1. Roma");
 
 		Mapa map = new Mapa();
 
-		map.add(coliseo); // Ahora sí se puede
+		map.add(coliseo); // Ahora sï¿½ se puede
 		map.dibujar();
 
 	}

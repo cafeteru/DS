@@ -1,6 +1,7 @@
 package editor;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 import editor.figuras.Figura;
 
@@ -16,7 +17,7 @@ public class Dibujo {
 			figura.dibujar();
 	}
 
-	public void añadirFigura(Figura figura) {
+	public void aÃ±adirFigura(Figura figura) {
 		figuras.add(figura);
 	}
 

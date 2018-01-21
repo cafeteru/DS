@@ -1,6 +1,6 @@
 package nodos;
 
-import java.util.*;
+import java.util.List;
 
 import recorrerarboles.Visitor;
 
@@ -12,7 +12,7 @@ public class Programa implements Nodo {
 	}
 
 	@Override
-	public Object accept(Visitor v, Object param)  {
+	public Object accept(Visitor v, Object param) {
 		return v.visit(this, param);
 	}
 }

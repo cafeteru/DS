@@ -1,9 +1,8 @@
 package platform.android;
 
-import game.AbstractBallGame;
-
 import java.awt.Point;
 
+import game.AbstractBallGame;
 import platform.Image2D;
 
 public class AndroidBallGame extends AbstractBallGame {

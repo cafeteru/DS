@@ -1,9 +1,19 @@
 package recorrerarboles;
 
-import nodos.*;
+import nodos.Asignacion;
+import nodos.ConstanteInt;
+import nodos.Division;
+import nodos.Nodo;
+import nodos.Print;
+import nodos.Producto;
+import nodos.Programa;
+import nodos.Read;
+import nodos.Sentencia;
+import nodos.Suma;
+import nodos.Variable;
 
 /*
- * Inconvenientes: Todo el código de todos los nodos en un solo metodo
+ * Inconvenientes: Todo el cï¿½digo de todos los nodos en un solo metodo
  */
 
 public class RecorridoRecursivo {

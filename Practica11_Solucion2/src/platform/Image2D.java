@@ -1,6 +1,5 @@
 package platform;
 
-
 public class Image2D {
 	public Image2D(String name, int width, int height) {
 		this.name = name;
@@ -23,7 +22,7 @@ public class Image2D {
 	public byte[] getPixels() {
 		return pixels;
 	}
-	
+
 	private int width, height;
 	private byte[] pixels;
 	private String name;

@@ -1,6 +1,7 @@
 package Main;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 import Campos.Campo;
 

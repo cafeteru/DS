@@ -1,5 +1,8 @@
 package encuesta;
-import java.io.*;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class UserInterface {
 
@@ -16,7 +19,7 @@ public class UserInterface {
 			System.out.print(">");
 
 			String[] line = in.readLine().split(" ");
-			// No se comprueba que el número de palabras sea el adecuado
+			// No se comprueba que el nï¿½mero de palabras sea el adecuado
 
 			if (line[0].equals("exit"))
 				return;
@@ -32,4 +35,3 @@ public class UserInterface {
 
 	private static BufferedReader in;
 }
-

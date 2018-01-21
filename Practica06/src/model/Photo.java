@@ -1,12 +1,12 @@
 package model;
 
-import components.*;
+import components.Coordinates;
 
 public class Photo {
 
 	private String description;
 	private String user; // Usuario que ha subido la foto
-	private Coordinates coordinates;	// Coordenadas de la foto
+	private Coordinates coordinates; // Coordenadas de la foto
 
 	public Photo(String description, String user, Coordinates coordinates) {
 		this.description = description;

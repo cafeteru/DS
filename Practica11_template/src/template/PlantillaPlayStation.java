@@ -12,7 +12,8 @@ public class PlantillaPlayStation extends Plantilla {
 
 	@Override
 	public void drawBall(Image2D image) {
-		System.out.println("(PS5) Dibujando '" + image.getName() + "' en [" + point.x + "," + point.y + "]");
+		System.out.println("(PS5) Dibujando '" + image.getName() + "' en ["
+				+ point.x + "," + point.y + "]");
 
 	}
 

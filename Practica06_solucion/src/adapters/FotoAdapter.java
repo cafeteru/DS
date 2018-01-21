@@ -1,7 +1,7 @@
 package adapters;
 
-import model.*;
-import components.*;
+import components.Coordenadas;
+import model.Foto;
 import vista.Lugar;
 
 public class FotoAdapter implements Lugar {
@@ -17,7 +17,8 @@ public class FotoAdapter implements Lugar {
 	}
 
 	public String getTooltipText() {
-		return photo.getDescripcion() + ". Foto subida por " + photo.getUsuario();
+		return photo.getDescripcion() + ". Foto subida por "
+				+ photo.getUsuario();
 	}
 
 	public void open() {

@@ -1,10 +1,16 @@
-import java.awt.*;
+import java.awt.Point;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.List;
-import java.io.*;
-import java.util.*;
 
-import editor.*;
-import editor.figuras.*;
+import editor.Dibujo;
+import editor.Editor;
+import editor.figuras.Circulo;
+import editor.figuras.Cuadrado;
+import editor.figuras.Figura;
+import editor.figuras.Triangulo;
 import editor.raton.Raton;
 
 public class Main {
@@ -17,12 +23,14 @@ public class Main {
 		in = new BufferedReader(new InputStreamReader(System.in));
 		Dibujo dibujo = new Dibujo();
 		Editor editor = new Editor(dibujo, new Raton(dibujo));
-		
+
 		puntos = new ArrayList<>();
 		int contadorFigura = 0, contador = 0;
 
-		System.out.println("Comandos Herramientas: cuadrado, circulo, triangulo, seleccion");
-		System.out.println("Comandos Ratón: pinchar x,y / mover x,y / soltar x,y");
+		System.out.println(
+				"Comandos Herramientas: cuadrado, circulo, triangulo, seleccion");
+		System.out.println(
+				"Comandos Ratï¿½n: pinchar x,y / mover x,y / soltar x,y");
 		System.out.println("Otros Comandos: dibujar, exit");
 		Figura figura = null;
 		do {
@@ -41,7 +49,7 @@ public class Main {
 				contadorFigura = 3;
 				figura = new Triangulo(new Point(), new Point(), new Point());
 			} else if (line[0].equals("seleccion"))
-				contadorFigura = 1; 
+				contadorFigura = 1;
 			else if (line[0].equals("pinchar")) {
 				int x = Integer.parseInt(line[1]);
 				int y = Integer.parseInt(line[2]);
@@ -58,22 +66,25 @@ public class Main {
 			} else if (line[0].equals("dibujar"))
 				editor.dibujar();
 			else
-				System.out.println("Comando no válido");
+				System.out.println("Comando no vï¿½lido");
 
 			if (contador == contadorFigura) {
 				if (figura instanceof Cuadrado)
-					editor.getDibujo().añadirFigura(new Cuadrado(puntos.get(0), puntos.get(1)));
+					editor.getDibujo().aÃ±adirFigura(
+							new Cuadrado(puntos.get(0), puntos.get(1)));
 				else if (figura instanceof Circulo)
-					editor.getDibujo().añadirFigura(new Circulo(puntos.get(0), puntos.get(1)));
+					editor.getDibujo().aÃ±adirFigura(
+							new Circulo(puntos.get(0), puntos.get(1)));
 				else if (figura instanceof Triangulo)
-					editor.getDibujo().añadirFigura(new Triangulo(puntos.get(0), puntos.get(1), puntos.get(2)));
+					editor.getDibujo().aÃ±adirFigura(new Triangulo(puntos.get(0),
+							puntos.get(1), puntos.get(2)));
 				contador = 0;
 				contadorFigura = 0;
 				puntos.clear();
 				figura = null;
 			}
 		} while (true);
-		
+
 	}
 
 	private BufferedReader in;

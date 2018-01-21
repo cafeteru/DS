@@ -1,6 +1,6 @@
 package vm;
 
-// Versión sin control de errores
+// Versiï¿½n sin control de errores
 
 public class State {
 
@@ -19,11 +19,11 @@ public class State {
 	public int pop() {
 		return pila[--sp];
 	}
-	
+
 	public int read(int direccion) {
 		return memoria[direccion];
 	}
-	
+
 	public void write(int direccion, int valor) {
 		memoria[direccion] = valor;
 	}

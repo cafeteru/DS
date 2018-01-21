@@ -1,9 +1,10 @@
 package vista;
 
 import java.awt.Rectangle;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
-import components.*;
+import components.Coordenadas;
 
 public class Mapa {
 	private List<Lugar> lugares = new ArrayList<Lugar>();
@@ -14,7 +15,8 @@ public class Mapa {
 
 	public void dibujar() {
 		for (Lugar lugar : lugares)
-			System.out.println(lugar.getNombre() + " " + lugar.getCoordinates());
+			System.out
+					.println(lugar.getNombre() + " " + lugar.getCoordinates());
 	}
 
 	public void click(int x, int y) {
@@ -32,7 +34,9 @@ public class Mapa {
 	private Lugar buscaLugar(int x, int y) {
 		for (Lugar lugar : lugares) {
 			Coordenadas coordinates = lugar.getCoordinates();
-			Rectangle elementArea = new Rectangle((int) coordinates.getLongitud(), (int) coordinates.getLatitud(), 9, 9);
+			Rectangle elementArea = new Rectangle(
+					(int) coordinates.getLongitud(),
+					(int) coordinates.getLatitud(), 9, 9);
 			if (elementArea.contains(x, y))
 				return lugar;
 		}

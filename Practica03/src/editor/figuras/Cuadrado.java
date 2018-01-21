@@ -3,9 +3,9 @@ package editor.figuras;
 import java.awt.Point;
 
 public class Cuadrado implements Figura {
-	int x, y; // Coordenadas del lugar donde se ha pinchado el ratón
+	int x, y; // Coordenadas del lugar donde se ha pinchado el ratï¿½n
 	Point esquina;
-	int ancho, alto; // Atributos del triángulo
+	int ancho, alto; // Atributos del triï¿½ngulo
 
 	boolean pinchado;
 
@@ -18,12 +18,14 @@ public class Cuadrado implements Figura {
 
 	@Override
 	public void dibujar() {
-		System.out.println("Cuadrado: x = " + esquina.getX() + " , y = " + "" + esquina.getY() + ", ancho = " + ancho
-				+ "" + ", alto = " + alto);
+		System.out.println("Cuadrado: x = " + esquina.getX() + " , y = " + ""
+				+ esquina.getY() + ", ancho = " + ancho + "" + ", alto = "
+				+ alto);
 	}
 
 	public boolean seleccionado() {
-		pinchado = (esquina.x <= x && x <= esquina.x + ancho) && (esquina.y <= y && y <= esquina.y + alto);
+		pinchado = (esquina.x <= x && x <= esquina.x + ancho)
+				&& (esquina.y <= y && y <= esquina.y + alto);
 		return pinchado;
 	}
 

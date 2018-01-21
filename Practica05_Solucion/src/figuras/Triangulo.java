@@ -1,9 +1,8 @@
 package figuras;
 
-import java.awt.*;
+import java.awt.Point;
 
-import editor.*;
-
+import editor.Figura;
 
 public class Triangulo implements Figura {
 
@@ -14,7 +13,8 @@ public class Triangulo implements Figura {
 	}
 
 	public void dibujar() {
-		System.out.println("Triangulo: v1 = " + v1 + ", v2 = " + v2 + ", v3 = " + v3);
+		System.out.println(
+				"Triangulo: v1 = " + v1 + ", v2 = " + v2 + ", v3 = " + v3);
 	}
 
 	public void mover(int dx, int dy) {
@@ -24,9 +24,10 @@ public class Triangulo implements Figura {
 	}
 
 	public boolean contiene(int x, int y) {
-		
-		Point posicion = new Point(x,y);
-		return posicion.equals(v1) || posicion.equals(v2) || posicion.equals(v3);
+
+		Point posicion = new Point(x, y);
+		return posicion.equals(v1) || posicion.equals(v2)
+				|| posicion.equals(v3);
 	}
 
 	private Point v1, v2, v3;

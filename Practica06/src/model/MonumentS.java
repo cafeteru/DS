@@ -1,10 +1,9 @@
 package model;
 
 import components.Coordinates;
-
 import views.MapElement;
 
-public class MonumentS extends Monument implements MapElement{
+public class MonumentS extends Monument implements MapElement {
 
 	public MonumentS(String name, String author, String address) {
 		super(name, author, address);
@@ -26,8 +25,7 @@ public class MonumentS extends Monument implements MapElement{
 	@Override
 	public void open() {
 		// TODO Auto-generated method stub
-		
-	}
 
+	}
 
 }

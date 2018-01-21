@@ -1,5 +1,7 @@
 package formulario;
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Formulario {
 	public void addCampo(Campo campo) {

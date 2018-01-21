@@ -19,7 +19,7 @@ public class CambioMoverFigura implements Cambio {
 
 	@Override
 	public void deshacer() {
-		if (actual != null){
+		if (actual != null) {
 			actual.mover(-posicionXAnterior, -posicionXAnterior);
 		}
 	}

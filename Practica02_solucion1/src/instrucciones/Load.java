@@ -1,5 +1,6 @@
 package instrucciones;
-import vm.*;
+
+import vm.State;
 
 public class Load extends AbstractInstruccion {
 

@@ -1,7 +1,8 @@
 package adapters;
 
-import model.*;
-import components.*;
+import components.Coordenadas;
+import components.GPS;
+import model.Monumento;
 import vista.Lugar;
 
 public class MonumentoAdapter implements Lugar {

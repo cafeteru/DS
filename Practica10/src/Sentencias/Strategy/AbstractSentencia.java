@@ -2,7 +2,7 @@ package Sentencias.Strategy;
 
 import Sentencias.Sentencia;
 
-public class AbstractSentencia implements Sentencia{
+public class AbstractSentencia implements Sentencia {
 	StringBuilder texto;
 	String[] line;
 

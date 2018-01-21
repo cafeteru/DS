@@ -12,7 +12,7 @@ public class Normalizar extends Decorator {
 
 	@Override
 	public void send(char c) throws IOException {
-		if(c == '\r')
+		if (c == '\r')
 			return;
 		super.send(c);
 	}

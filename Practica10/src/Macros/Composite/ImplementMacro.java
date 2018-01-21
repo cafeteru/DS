@@ -1,6 +1,7 @@
 package Macros.Composite;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 import Macros.Macro;
 import Sentencias.Sentencia;
@@ -14,7 +15,7 @@ public class ImplementMacro implements Macro {
 
 	@Override
 	public void ejecutar() {
-		for(Sentencia sentencia: sentencias)
+		for (Sentencia sentencia : sentencias)
 			sentencia.ejecutar();
 	}
 

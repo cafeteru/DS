@@ -1,6 +1,8 @@
 package Campos;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 import Campos.Strategy.Comprobador;
 
@@ -15,7 +17,8 @@ public class Campo {
 	}
 
 	public void pideDato() {
-		BufferedReader consola = new BufferedReader(new InputStreamReader(System.in));
+		BufferedReader consola = new BufferedReader(
+				new InputStreamReader(System.in));
 		boolean valido = true;
 		do {
 			try {

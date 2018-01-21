@@ -1,11 +1,12 @@
 package figuras;
 
-import java.awt.*;
+import java.awt.Point;
 
-import editor.*;
-
-
-import herramientas.*;
+import editor.Editor;
+import editor.Figura;
+import editor.Historial;
+import herramientas.CambioCreacion;
+import herramientas.Herramienta;
 
 public class HerramientaTriangulo implements Herramienta {
 	public HerramientaTriangulo(Editor editor) {
@@ -17,7 +18,8 @@ public class HerramientaTriangulo implements Herramienta {
 		if (vertices == 3) {
 			Figura figura = new Triangulo(vertice[0], vertice[1], vertice[2]);
 			editor.getDibujo().addFigura(figura);
-			Historial.getInstance().añadeCambio(new CambioCreacion(editor.getDibujo(), figura));
+			Historial.getInstance().añadeCambio(
+					new CambioCreacion(editor.getDibujo(), figura));
 			vertices = 0;
 			editor.finHerramienta();
 		}

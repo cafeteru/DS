@@ -1,9 +1,10 @@
 package views;
 
 import java.awt.Rectangle;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
-import components.*;
+import components.Coordinates;
 
 public class MapView {
 	private List<MapElement> elements = new ArrayList<MapElement>();
@@ -14,7 +15,8 @@ public class MapView {
 
 	public void draw() {
 		for (MapElement element : elements)
-			System.out.println(element.getName() + " " + element.getCoordinates());
+			System.out.println(
+					element.getName() + " " + element.getCoordinates());
 	}
 
 	public void click(int x, int y) {
@@ -32,7 +34,9 @@ public class MapView {
 	private MapElement getElementAt(int x, int y) {
 		for (MapElement element : elements) {
 			Coordinates coordinates = element.getCoordinates();
-			Rectangle elementArea = new Rectangle((int) coordinates.getLongitude(), (int) coordinates.getLatitude(), 9, 9);
+			Rectangle elementArea = new Rectangle(
+					(int) coordinates.getLongitude(),
+					(int) coordinates.getLatitude(), 9, 9);
 			if (elementArea.contains(x, y))
 				return element;
 		}

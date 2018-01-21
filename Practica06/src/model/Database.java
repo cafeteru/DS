@@ -1,6 +1,8 @@
 package model;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 import components.Coordinates;
 
@@ -23,9 +25,9 @@ public class Database {
 
 	public Collection<Photo> selectPhotos() {
 		List<Photo> fotos = new ArrayList<Photo>();
-		fotos.add(new Photo("El Coliseo de noche", "Raúl", new Coordinates(20,
-				20)));
-		fotos.add(new Photo("Un perro mordiendo a un turista", "Raúl",
+		fotos.add(new Photo("El Coliseo de noche", "Raï¿½l",
+				new Coordinates(20, 20)));
+		fotos.add(new Photo("Un perro mordiendo a un turista", "Raï¿½l",
 				new Coordinates(40, 40)));
 		return fotos;
 	}

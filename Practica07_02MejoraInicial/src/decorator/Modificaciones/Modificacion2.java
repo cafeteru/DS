@@ -2,7 +2,9 @@ package decorator.Modificaciones;
 
 import java.io.IOException;
 
-import decorator.*;
+import decorator.Encriptar;
+import decorator.Normalizar;
+import decorator.SinEspacios;
 import outputs.Output;
 
 public class Modificacion2 extends Encriptar {
@@ -29,7 +31,8 @@ public class Modificacion2 extends Encriptar {
 			output = new Normalizar(output);
 			output = new SinEspacios(output);
 		} else {
-			System.err.println("\nOpción no valida -> Se cambia a opción por defecto");
+			System.err.println(
+					"\nOpciï¿½n no valida -> Se cambia a opciï¿½n por defecto");
 		}
 		return output;
 	}

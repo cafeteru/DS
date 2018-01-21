@@ -1,6 +1,8 @@
 package herramientas;
 
-import editor.*;
+import editor.Cambio;
+import editor.Dibujo;
+import editor.Figura;
 
 public class CambioCreacion implements Cambio {
 
@@ -9,7 +11,7 @@ public class CambioCreacion implements Cambio {
 
 	public CambioCreacion(Dibujo dibujo, Figura figura) {
 		this.figura = figura;
-		this.dibujo =  dibujo;
+		this.dibujo = dibujo;
 	}
 
 	public void undo() {

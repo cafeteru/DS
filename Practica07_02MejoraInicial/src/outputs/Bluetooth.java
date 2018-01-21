@@ -1,5 +1,7 @@
 package outputs;
-import java.io.*;
+
+import java.io.IOException;
+import java.io.StringWriter;
 
 public class Bluetooth implements Output {
 	public Bluetooth(String device) {

@@ -1,6 +1,8 @@
 package editor.actions;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
 import editor.Editor;
 
@@ -9,7 +11,8 @@ public class Open implements Action {
 
 	public Open(String filename) {
 		if (filename == null || filename.trim().length() == 0)
-			throw new IllegalArgumentException("¡La acción de abrir un fichero necesita el nombre del fichero!");
+			throw new IllegalArgumentException(
+					"¡La acción de abrir un fichero necesita el nombre del fichero!");
 		this.filename = filename;
 	}
 
@@ -18,7 +21,8 @@ public class Open implements Action {
 		try {
 			editor.setText(readFile(filename));
 		} catch (IOException e) {
-			System.out.printf("No se pudo abrir el fichero '%s': %s", filename, e.getMessage());
+			System.out.printf("No se pudo abrir el fichero '%s': %s", filename,
+					e.getMessage());
 		}
 	}
 

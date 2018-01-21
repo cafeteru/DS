@@ -1,11 +1,13 @@
 package editor;
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Dibujo {
 	public void addFigura(Figura figura) {
 		figuras.add(figura);
 	}
-	
+
 	public void dibuja() {
 		for (Figura figura : figuras)
 			figura.dibujar();

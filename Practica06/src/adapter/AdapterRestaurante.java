@@ -1,8 +1,8 @@
 package adapter;
 
-import model.Restaurant;
 import components.Coordinates;
 import components.GPS;
+import model.Restaurant;
 import views.MapElement;
 
 public class AdapterRestaurante implements MapElement {

@@ -1,6 +1,6 @@
 package instrucciones;
-import vm.*;
 
+import vm.State;
 
 public interface Instruccion {
 	public void execute(State state);

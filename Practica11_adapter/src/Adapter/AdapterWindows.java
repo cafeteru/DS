@@ -7,7 +7,7 @@ import platform.windows.WindowsAPI;
 
 public class AdapterWindows implements Adapter {
 	WindowsAPI api;
-	
+
 	public AdapterWindows() {
 		api = new WindowsAPI();
 	}
@@ -24,6 +24,6 @@ public class AdapterWindows implements Adapter {
 
 	@Override
 	public void drawBall(Image2D image, Point point) {
-		api.paint(point.x, point.y, image);		
+		api.paint(point.x, point.y, image);
 	}
 }

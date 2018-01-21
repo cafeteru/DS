@@ -7,7 +7,8 @@ public class Insert implements Action {
 
 	public Insert(String[] words) {
 		if (words == null || words.length == 0)
-			throw new IllegalArgumentException("Se necesita al menos una palabra a insertar");
+			throw new IllegalArgumentException(
+					"Se necesita al menos una palabra a insertar");
 		for (String word : words) {
 			text.append(word + " ");
 		}

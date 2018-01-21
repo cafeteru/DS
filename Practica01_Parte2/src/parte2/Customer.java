@@ -1,6 +1,7 @@
 package parte2;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 // Cliente del videoclub
 
@@ -33,12 +34,12 @@ public class Customer {
 			totalPrice += price;
 			totalPoints += points;
 
-			// 4) Muestra el importe de esta película alquilada
+			// 4) Muestra el importe de esta pelï¿½cula alquilada
 			result += "\t" + rental.getMovie().getTitle() + "\t" + price
-					+ " €\n";
+					+ " ï¿½\n";
 		}
 
-		result += "La deuda es de " + totalPrice + " €\n";
+		result += "La deuda es de " + totalPrice + " ï¿½\n";
 		result += "Has obtenido " + totalPoints + " puntos en tu tarjeta";
 
 		return result;

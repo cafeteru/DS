@@ -2,8 +2,8 @@ package platform.android;
 
 import java.awt.Point;
 
-import platform.*;
-
+import platform.Image2D;
+import platform.PlatformAdapter;
 
 public class AndroidAdapter implements PlatformAdapter {
 

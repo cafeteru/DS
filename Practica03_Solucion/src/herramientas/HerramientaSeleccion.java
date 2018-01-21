@@ -2,7 +2,8 @@ package herramientas;
 
 import java.awt.Point;
 
-import editor.*;
+import editor.Editor;
+import editor.Figura;
 
 public class HerramientaSeleccion implements Herramienta {
 

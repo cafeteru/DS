@@ -1,8 +1,22 @@
 package main;
-import instrucciones.*;
 
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.Reader;
+import java.util.ArrayList;
+import java.util.List;
+
+import instrucciones.Add;
+import instrucciones.Input;
+import instrucciones.Instruccion;
+import instrucciones.Jump;
+import instrucciones.JumpGreater;
+import instrucciones.Load;
+import instrucciones.Mul;
+import instrucciones.Output;
+import instrucciones.Push;
+import instrucciones.Store;
+import instrucciones.Sub;
 
 public class ProgramLoader {
 	public List<Instruccion> loadProgram(Reader reader) throws IOException {

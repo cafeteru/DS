@@ -1,5 +1,8 @@
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 public class Main {
 
@@ -12,11 +15,12 @@ public class Main {
 	private static int sp = 0;
 
 	public static void main(String[] args) throws Exception {
-		BufferedReader fichero = new BufferedReader(new FileReader("factorial.txt"));
+		BufferedReader fichero = new BufferedReader(
+				new FileReader("factorial.txt"));
 
 		String linea;
 		while ((linea = fichero.readLine()) != null)
-			cargaInstrucción(linea);
+			cargaInstruccion(linea);
 		fichero.close();
 
 		ejecutaPrograma();
@@ -68,7 +72,7 @@ public class Main {
 		}
 	}
 
-	private static void cargaInstrucción(String linea) {
+	private static void cargaInstruccion(String linea) {
 		if (linea.trim().length() == 0)
 			return;
 

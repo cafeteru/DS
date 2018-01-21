@@ -1,8 +1,16 @@
 package main;
 
-import validaciones.*;
-import validaciones.composite.*;
-import formulario.*;
+import formulario.Campo;
+import formulario.Formulario;
+import validaciones.CheckCodigoPostal;
+import validaciones.CheckGreater;
+import validaciones.CheckLength;
+import validaciones.CheckLess;
+import validaciones.CheckNumber;
+import validaciones.CheckText;
+import validaciones.CheckValues;
+import validaciones.composite.CheckAll;
+import validaciones.composite.CheckAny;
 
 public class Main {
 
@@ -11,26 +19,35 @@ public class Main {
 
 		formulario.addCampo(new Campo("Nombre", new CheckText()));
 		formulario.addCampo(new Campo("Apellido", new CheckText()));
-		formulario.addCampo(new Campo("Teléfono", new CheckNumber()));
-		formulario.addCampo(new Campo("Ciudad", new CheckValues("Santander", "Oviedo", "Cadiz")));
+		formulario.addCampo(new Campo("Telï¿½fono", new CheckNumber()));
+		formulario.addCampo(new Campo("Ciudad",
+				new CheckValues("Santander", "Oviedo", "Cadiz")));
 
-		// "Código de Producto". Longitud = 4
-		formulario.addCampo(new Campo("Código de Producto", new CheckLength(4)));
+		// "Cï¿½digo de Producto". Longitud = 4
+		formulario
+				.addCampo(new Campo("Cï¿½digo de Producto", new CheckLength(4)));
 
-		// "Código Postal". Digitos y longitud = 5
-		formulario.addCampo(new Campo("Código Postal", new CheckAll(new CheckNumber(), new CheckLength(5))));
-		formulario.addCampo(new Campo("Código Postal", new CheckCodigoPostal()));
+		// "Cï¿½digo Postal". Digitos y longitud = 5
+		formulario.addCampo(new Campo("Cï¿½digo Postal",
+				new CheckAll(new CheckNumber(), new CheckLength(5))));
+		formulario
+				.addCampo(new Campo("Cï¿½digo Postal", new CheckCodigoPostal()));
 
 		// "Edad". Digitos y mayor 18
-		formulario.addCampo(new Campo("Edad", new CheckAll(new CheckNumber(), new CheckGreater(18))));
+		formulario.addCampo(new Campo("Edad",
+				new CheckAll(new CheckNumber(), new CheckGreater(18))));
 		// "Sueldo". Digitos y mayor que 800 y menor que 1200
-		formulario.addCampo(new Campo("Sueldo", new CheckAll(new CheckNumber(), new CheckGreater(800), new CheckLess(1200))));
+		formulario.addCampo(new Campo("Sueldo", new CheckAll(new CheckNumber(),
+				new CheckGreater(800), new CheckLess(1200))));
 
-		// "Ubicación". Santander..Cádiz o código postal
-		formulario.addCampo(new Campo("Ubicación", new CheckAny(new CheckValues("Santander", "Oviedo", "Cádiz"), new CheckCodigoPostal())));
+		// "Ubicaciï¿½n". Santander..Cï¿½diz o cï¿½digo postal
+		formulario.addCampo(new Campo("Ubicaciï¿½n",
+				new CheckAny(new CheckValues("Santander", "Oviedo", "Cï¿½diz"),
+						new CheckCodigoPostal())));
 
-		// "Código de Promoción". Texto o (numero de 3 digitos)
-		formulario.addCampo(new Campo("Promoción", new CheckAny(new CheckText(), new CheckAll(new CheckNumber(), new CheckLength(3)))));
+		// "Cï¿½digo de Promociï¿½n". Texto o (numero de 3 digitos)
+		formulario.addCampo(new Campo("Promociï¿½n", new CheckAny(new CheckText(),
+				new CheckAll(new CheckNumber(), new CheckLength(3)))));
 
 		formulario.PideDatos();
 	}

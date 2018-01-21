@@ -1,7 +1,8 @@
 package vm;
-import instrucciones.*;
 
-import java.util.*;
+import java.util.List;
+
+import instrucciones.Instruccion;
 
 public class VirtualMachine {
 	private State state = new State();
@@ -11,4 +12,3 @@ public class VirtualMachine {
 			program.get(state.getIP()).execute(state);
 	}
 }
-

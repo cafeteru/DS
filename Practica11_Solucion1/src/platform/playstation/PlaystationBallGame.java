@@ -1,8 +1,9 @@
 package platform.playstation;
 
-import game.*;
 import java.awt.Point;
-import platform.*;
+
+import game.AbstractBallGame;
+import platform.Image2D;
 
 public class PlaystationBallGame extends AbstractBallGame {
 

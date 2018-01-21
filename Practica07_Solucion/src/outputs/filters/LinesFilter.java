@@ -1,8 +1,8 @@
 package outputs.filters;
 
-import java.io.*;
+import java.io.IOException;
 
-import outputs.*;
+import outputs.Output;
 
 public class LinesFilter implements Output {
 

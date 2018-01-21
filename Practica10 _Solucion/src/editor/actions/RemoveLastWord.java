@@ -5,7 +5,8 @@ import editor.Editor;
 public class RemoveLastWord implements Action {
 	@Override
 	public void execute(Editor editor) {
-		int indexOfLastWord = editor.getText().toString().trim().lastIndexOf(" ");
+		int indexOfLastWord = editor.getText().toString().trim()
+				.lastIndexOf(" ");
 		if (indexOfLastWord == -1)
 			editor.setText(new StringBuilder(""));
 		else

@@ -1,6 +1,7 @@
 package herramientas;
 
-import editor.*;
+import editor.Cambio;
+import editor.Figura;
 
 public class CambioMovimiento implements Cambio {
 

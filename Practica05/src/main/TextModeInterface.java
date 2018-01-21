@@ -1,11 +1,14 @@
 package main;
 
-import herramientas.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.Reader;
 
-import java.io.*;
-
-import editor.*;
-import figuras.*;
+import editor.Editor;
+import figuras.HerramientaCirculo;
+import figuras.HerramientaCuadrado;
+import figuras.HerramientaTriangulo;
+import herramientas.Herramienta;
 
 public class TextModeInterface {
 
@@ -22,8 +25,10 @@ public class TextModeInterface {
 	}
 
 	public void run() throws IOException {
-		System.out.println("Comandos Herramientas: cuadrado, circulo, triangulo, seleccion");
-		System.out.println("Comandos Ratón: pinchar x,y / mover x,y / soltar x,y");
+		System.out.println(
+				"Comandos Herramientas: cuadrado, circulo, triangulo, seleccion");
+		System.out.println(
+				"Comandos Ratï¿½n: pinchar x,y / mover x,y / soltar x,y");
 		System.out.println("Comandos Undo: deshacer, rehacer");
 		System.out.println("Otros Comandos: dibujar, exit");
 		do {
@@ -40,19 +45,22 @@ public class TextModeInterface {
 			else if (line[0].equals("seleccion"))
 				editor.setHerramienta(editor.getDefaultTool());
 			else if (line[0].equals("pinchar"))
-				editor.pinchar(Integer.parseInt(line[1]), Integer.parseInt(line[2]));
+				editor.pinchar(Integer.parseInt(line[1]),
+						Integer.parseInt(line[2]));
 			else if (line[0].equals("mover"))
-				editor.mover(Integer.parseInt(line[1]), Integer.parseInt(line[2]));
+				editor.mover(Integer.parseInt(line[1]),
+						Integer.parseInt(line[2]));
 			else if (line[0].equals("soltar"))
-				editor.soltar(Integer.parseInt(line[1]), Integer.parseInt(line[2]));
+				editor.soltar(Integer.parseInt(line[1]),
+						Integer.parseInt(line[2]));
 			else if (line[0].equals("dibujar"))
 				editor.dibujar();
-			else if(line[0].equals("deshacer"))
+			else if (line[0].equals("deshacer"))
 				editor.deshacer();
-			else if(line[0].equals("rehacer"))
+			else if (line[0].equals("rehacer"))
 				editor.rehacer();
 			else
-				System.out.println("Comando no válido");
+				System.out.println("Comando no vï¿½lido");
 
 		} while (true);
 	}

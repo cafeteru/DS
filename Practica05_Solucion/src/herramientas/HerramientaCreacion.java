@@ -2,8 +2,9 @@ package herramientas;
 
 import java.awt.Point;
 
-import editor.*;
-
+import editor.Editor;
+import editor.Figura;
+import editor.Historial;
 
 public abstract class HerramientaCreacion implements Herramienta {
 
@@ -22,7 +23,8 @@ public abstract class HerramientaCreacion implements Herramienta {
 		fin = new Point(x, y);
 		Figura figura = doCreaFigura(inicio, fin);
 		editor.getDibujo().addFigura(figura);
-		Historial.getInstance().añadeCambio(new CambioCreacion(editor.getDibujo(), figura));
+		Historial.getInstance()
+				.añadeCambio(new CambioCreacion(editor.getDibujo(), figura));
 		editor.finHerramienta();
 	}
 

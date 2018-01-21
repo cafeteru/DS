@@ -2,7 +2,8 @@ package game;
 
 import java.awt.Point;
 
-import platform.*;
+import platform.Image2D;
+import platform.PlatformAdapter;
 
 /* Esta clase/paquete sería el código del videojuego, el cual se quiere reutilizar
  * en las distintas plataformas sin tener que cambiar el código para cada una
@@ -22,8 +23,8 @@ public class BallGame {
 			Point point = platform.getPosition();
 			// Comprobar colisiones...
 			// Imprimir marcador...
-			// Otra l�gica del juego...
-			//drawBall(image, point);
+			// Otra l�gica del juego...
+			// drawBall(image, point);
 			platform.show(point.x, point.y, image);
 		}
 	}

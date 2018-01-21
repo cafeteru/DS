@@ -4,19 +4,20 @@ import java.awt.Point;
 
 import platform.Image2D;
 
-
 public class WindowsAPI {
 
 	public Image2D loadFile(String name) {
-		System.out.println("(Windows) Cargada imagen '" + name + "' del disco duro.");
+		System.out.println(
+				"(Windows) Cargada imagen '" + name + "' del disco duro.");
 		return new Image2D(name, 10, 10);
 	}
 
 	public void paint(int x, int y, Image2D image) {
-		System.out.println("(Windows) Dibujando '" + image.getName() + "' en [" + x + "," + y + "]");
+		System.out.println("(Windows) Dibujando '" + image.getName() + "' en ["
+				+ x + "," + y + "]");
 	}
 
-	// Posición en la que el usuario pincha con el ratón 
+	// Posiciï¿½n en la que el usuario pincha con el ratï¿½n
 	public Point getMouseClick() {
 		point.translate(10, 10);
 		return new Point(point);

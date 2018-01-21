@@ -1,24 +1,35 @@
 package Componentes;
 
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
-import Componentes.Instrucciones.*;
+import Componentes.Instrucciones.Add;
+import Componentes.Instrucciones.Input;
+import Componentes.Instrucciones.Instruccion;
+import Componentes.Instrucciones.Jmp;
+import Componentes.Instrucciones.Jmpg;
+import Componentes.Instrucciones.Load;
+import Componentes.Instrucciones.Mul;
+import Componentes.Instrucciones.Output;
+import Componentes.Instrucciones.Push;
+import Componentes.Instrucciones.Store;
+import Componentes.Instrucciones.Sub;
 
 public class Programa {
 	private List<String[]> instrucciones = new ArrayList<String[]>();
 	private Compilador compilador;
-	
-	public Programa(String programa) throws IOException{
+
+	public Programa(String programa) throws IOException {
 		instrucciones = new Fichero(programa).getInstrucciones();
 		compilador = new Compilador();
 	}
-	
-	public void ejecutar(){
+
+	public void ejecutar() {
 		identificarInstrucciones();
 	}
-	
-	public void identificarInstrucciones(){
+
+	public void identificarInstrucciones() {
 		Pila pila = compilador.getPila();
 		while (pila.getIp() < instrucciones.size()) {
 			String[] instruccion = instrucciones.get(pila.getIp());

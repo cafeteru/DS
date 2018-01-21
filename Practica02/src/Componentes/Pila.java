@@ -1,7 +1,7 @@
 package Componentes;
 
 public class Pila {
-	private int[] tamaño = new int[32];
+	private int[] tamanio = new int[32];
 	private int sp, ip;
 
 	public Pila() {
@@ -10,13 +10,13 @@ public class Pila {
 	}
 
 	public void push(int valor) {
-		tamaño[sp] = valor;
+		tamanio[sp] = valor;
 		sp++;
 	}
 
 	public int pop() {
 		sp--;
-		return tamaño[sp];
+		return tamanio[sp];
 	}
 
 	public void aumentarPila() {

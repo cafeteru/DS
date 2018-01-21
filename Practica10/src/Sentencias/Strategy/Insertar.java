@@ -1,6 +1,6 @@
 package Sentencias.Strategy;
 
-public class Insertar extends AbstractSentencia{
+public class Insertar extends AbstractSentencia {
 
 	public Insertar(StringBuilder texto, String[] line) {
 		super(texto, line);

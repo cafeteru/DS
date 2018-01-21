@@ -1,7 +1,10 @@
 package editor;
 
-import editor.command.*;
-import herramientas.*;
+import editor.command.CambioCrearFigura;
+import editor.command.CambioMoverFigura;
+import editor.command.Historial;
+import herramientas.Herramienta;
+import herramientas.HerramientaSeleccion;
 
 public class Editor {
 	private Dibujo dibujo;
@@ -52,7 +55,8 @@ public class Editor {
 	public void mover(int x, int y) {
 		Figura ultima = dibujo.figuras.get(dibujo.figuras.size() - 1);
 		actual.mover(x, y);
-		historial.añadirCambio(new CambioMoverFigura(ultima, x - posicionX, y - posicionY));
+		historial.añadirCambio(
+				new CambioMoverFigura(ultima, x - posicionX, y - posicionY));
 	}
 
 	public void soltar(int x, int y) {

@@ -3,7 +3,7 @@ package Componentes.Instrucciones;
 import Componentes.Compilador;
 import Componentes.Pila;
 
-public class Load implements Instruccion{
+public class Load implements Instruccion {
 
 	@Override
 	public void ejecutar(Compilador compilador) {

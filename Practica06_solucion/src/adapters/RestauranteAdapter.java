@@ -1,7 +1,8 @@
 package adapters;
 
-import model.*;
-import components.*;
+import components.Coordenadas;
+import components.GPS;
+import model.Restaurante;
 import vista.Lugar;
 
 public class RestauranteAdapter implements Lugar {
@@ -22,7 +23,8 @@ public class RestauranteAdapter implements Lugar {
 	}
 
 	public String getTooltipText() {
-		return "Restaurant '" + restaurant.getNombre() + "'. Tfn: " + restaurant.getTelefono();
+		return "Restaurant '" + restaurant.getNombre() + "'. Tfn: "
+				+ restaurant.getTelefono();
 	}
 
 	public void open() {

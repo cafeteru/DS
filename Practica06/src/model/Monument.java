@@ -19,7 +19,7 @@ public class Monument {
 	public String getAddress() {
 		return address;
 	}
-	
+
 	public String getAuthor() {
 		return author;
 	}

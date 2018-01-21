@@ -1,6 +1,14 @@
 package recorrerarboles;
 
-import nodos.*;
+import nodos.Asignacion;
+import nodos.ConstanteInt;
+import nodos.Division;
+import nodos.Print;
+import nodos.Producto;
+import nodos.Programa;
+import nodos.Read;
+import nodos.Suma;
+import nodos.Variable;
 
 public interface Visitor {
 	Object visit(Programa programa, Object param);

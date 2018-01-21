@@ -1,6 +1,6 @@
 package validaciones;
 
-import formulario.*;
+import formulario.Validation;
 
 public class CheckGreater implements Validation {
 

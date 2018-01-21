@@ -1,7 +1,7 @@
 package adapter;
 
-import model.Photo;
 import components.Coordinates;
+import model.Photo;
 import views.MapElement;
 
 public class AdapterPhoto implements MapElement {

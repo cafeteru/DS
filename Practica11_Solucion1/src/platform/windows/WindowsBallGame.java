@@ -1,10 +1,9 @@
 package platform.windows;
 
-import game.*;
-
 import java.awt.Point;
 
-import platform.*;
+import game.AbstractBallGame;
+import platform.Image2D;
 
 public class WindowsBallGame extends AbstractBallGame {
 	private WindowsAPI windows;

@@ -10,7 +10,7 @@ public class ComprobarUbicacion extends ComprobarPredefinido {
 	public boolean comprobarDato(String dato) {
 		boolean ciudad = super.comprobarDato(dato);
 		if (!ciudad)
-			return new ComprobarNumero().comprobarDato(dato) 
+			return new ComprobarNumero().comprobarDato(dato)
 					&& new ComprobarLongitud(3).comprobarDato(dato);
 		return ciudad;
 	}

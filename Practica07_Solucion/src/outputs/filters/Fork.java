@@ -1,8 +1,8 @@
 package outputs.filters;
 
-import java.io.*;
+import java.io.IOException;
 
-import outputs.*;
+import outputs.Output;
 
 public class Fork implements Output {
 
@@ -22,8 +22,8 @@ public class Fork implements Output {
 		output1.close();
 		output2.close();
 	}
-	
+
 }
 
-// ¿Qué patrón es?
-// Cómo se podría generalizar?
+// ï¿½Quï¿½ patrï¿½n es?
+// Cï¿½mo se podrï¿½a generalizar?

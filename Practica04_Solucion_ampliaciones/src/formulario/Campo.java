@@ -1,5 +1,8 @@
 package formulario;
-import java.io.*;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Campo {
 
@@ -9,7 +12,8 @@ public class Campo {
 	}
 
 	public void pideDato() {
-		BufferedReader consola = new BufferedReader(new InputStreamReader(System.in));
+		BufferedReader consola = new BufferedReader(
+				new InputStreamReader(System.in));
 
 		do {
 			try {

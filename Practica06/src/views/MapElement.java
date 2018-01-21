@@ -1,6 +1,6 @@
 package views;
 
-import components.*;
+import components.Coordinates;
 
 public interface MapElement {
 	String getName();

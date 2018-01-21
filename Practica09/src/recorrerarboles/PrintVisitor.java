@@ -1,12 +1,24 @@
 package recorrerarboles;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.HashMap;
 
-import nodos.*;
+import nodos.Asignacion;
+import nodos.ConstanteInt;
+import nodos.Division;
+import nodos.Print;
+import nodos.Producto;
+import nodos.Programa;
+import nodos.Read;
+import nodos.Sentencia;
+import nodos.Suma;
+import nodos.Variable;
 
 public class PrintVisitor implements Visitor {
-	BufferedReader console = new BufferedReader(new InputStreamReader(System.in));
+	BufferedReader console = new BufferedReader(
+			new InputStreamReader(System.in));
 	HashMap<String, Integer> valores = new HashMap<>();
 
 	@Override
@@ -23,9 +35,10 @@ public class PrintVisitor implements Visitor {
 			int value = Integer.parseInt(console.readLine());
 			valores.put(read.var.name, value);
 		} catch (NumberFormatException e) {
-			System.out.println("Debe introducir número entero");
+			System.out.println("Debe introducir nï¿½mero entero");
 		} catch (IOException e) {
-			System.out.println("Se produjo un error al leer el valor de la variable");
+			System.out.println(
+					"Se produjo un error al leer el valor de la variable");
 		}
 		return null;
 	}
@@ -38,23 +51,27 @@ public class PrintVisitor implements Visitor {
 
 	@Override
 	public Object visit(Asignacion asignacion, Object param) {
-		valores.put(asignacion.variable.name, (Integer) asignacion.expr.accept(this, param));
+		valores.put(asignacion.variable.name,
+				(Integer) asignacion.expr.accept(this, param));
 		return null;
 	}
 
 	@Override
 	public Object visit(Suma suma, Object param) {
-		return (Integer) suma.left.accept(this, param) + (Integer) suma.right.accept(this, param);
+		return (Integer) suma.left.accept(this, param)
+				+ (Integer) suma.right.accept(this, param);
 	}
 
 	@Override
 	public Object visit(Producto producto, Object param) {
-		return (Integer) producto.left.accept(this, param) * (Integer) producto.right.accept(this, param);
+		return (Integer) producto.left.accept(this, param)
+				* (Integer) producto.right.accept(this, param);
 	}
 
 	@Override
 	public Object visit(Division division, Object param) {
-		return (Integer) division.left.accept(this, param) / (Integer) division.right.accept(this, param);
+		return (Integer) division.left.accept(this, param)
+				/ (Integer) division.right.accept(this, param);
 	}
 
 	@Override
